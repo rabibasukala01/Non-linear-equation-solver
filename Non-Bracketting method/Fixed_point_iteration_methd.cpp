@@ -7,17 +7,25 @@ using namespace std;
 int main()
 {
     float x, g, f, error;
+    int i = 0;
     // Initial guess
     cout << "Enter  initial guess : ";
     cin >> x;
     cout << "Enter error tolorence : ";
     cin >> error;
 
+    cout << "I"
+         << "\t\t\t"
+         << "x"
+         << "\t\t\t"
+         << "g" << endl;
     do
     {
         g = g(x);
         x = g;
         f = f(x);
+        i = i + 1;
+        cout << i << "\t\t\t" << x << "\t\t\t" << g << endl;
     } while (fabs(f) > error);
 
     cout << "Root of f(x) with error tolorence " << error << " is " << x;
