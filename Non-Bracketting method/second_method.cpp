@@ -15,6 +15,17 @@ int main()
     cin >> x1;
     cout << "Enter error tolorence : ";
     cin >> error;
+    cout << "x0"
+         << "\t\t"
+         << "x1"
+         << "\t\t"
+         << "x2"
+         << "\t\t"
+         << "f0"
+         << "\t\t"
+         << "f1"
+         << "\t\t"
+         << "f2" << endl;
 
     do
     {
@@ -22,9 +33,11 @@ int main()
         f1 = f(x1);
 
         x2 = x0 - (f0 * (x1 - x0)) / (f1 - f0);
+        cout << x0 << "\t\t" << x1 << "\t\t" << x2 << "\t\t" << f0 << "\t\t" << f1 << "\t\t" << f2 << endl;
         x0 = x1;
         x1 = x2;
         f2 = f(x2);
+
     } while (fabs(f2) > error);
 
     cout << "Root of f(x) with error tolorence " << error << " is " << x2;
