@@ -26,6 +26,18 @@ guess:
     {
         cout << "Enter error tolorence : ";
         cin >> error;
+        cout
+            << "x0"
+            << "\t\t"
+            << "x1"
+            << "\t\t"
+            << "x2"
+            << "\t\t"
+            << "f0"
+            << "\t\t"
+            << "f1"
+            << "\t\t"
+            << "f2" << endl;
         do
         {
             x2 = x0 - ((f0 * (x1 - x0)) / (f1 - f0));
@@ -41,6 +53,7 @@ guess:
                 x0 = x2;
                 f0 = f2;
             }
+            cout << x0 << "\t\t" << x1 << "\t\t" << x2 << "\t\t" << f0 << "\t\t" << f1 << "\t\t" << f2 << endl;
 
         } while (fabs(f2) > error);
     }
